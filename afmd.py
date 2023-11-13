@@ -917,7 +917,7 @@ mergerCounter = 0
 
 
 # The great merge function
-def mergePdfs(start, end, docRange, folderPath=r"C:\Users\Adam\Desktop\pythonProject", isGUI=False):
+def mergePdfs(start, end, docRange, folderPath, isGUI=False):
     global mergerCounter
     global userDocumentFolder
     if isGUI == True:
@@ -964,12 +964,12 @@ def generatePDF(inputNumberDocs):
 
             # When each file has been written, execute the great merger function
             if i == 3:
-                mergePdfs(0, 4, "_1_4")
+                mergePdfs(0, 4, "_1_4", userDocumentFolder)
 
             if i == 7:
-                mergePdfs(4, 8, "_5_8")
+                mergePdfs(4, 8, "_5_8", userDocumentFolder)
 
             if i == 12:
-                mergePdfs(8, 13, "_9_13")
+                mergePdfs(8, 13, "_9_13", userDocumentFolder)
 
         print("Current Document: " + str(j + 1) + " of " + str(numDocs))

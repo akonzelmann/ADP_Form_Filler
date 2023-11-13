@@ -3,6 +3,9 @@ import afpmd
 import afres
 import afmd
 
+# Change to your python project folder
+folderPath = r"C:\Users\Adam\Desktop\pythonProject"
+
 sg.theme('DarkAmber')
 
 names = ["Application for Funding Pressure Modification Devices", "Application for Funding Respiratory Equipment Services", "Application for Funding Mobility Devices"]
@@ -24,7 +27,7 @@ while True:
 
     if event == "Ok" and values['-COMBO-'] == "Application for Funding Pressure Modification Devices":
         afpmd.mergePdfs(0, 0, 0, values["-IN2-"], True)
-        print("Generating AFMPD...")
+        print("Generating AFPMD...")
         afpmd.generatePDF(int(values[0]))
         window.refresh()
         break
